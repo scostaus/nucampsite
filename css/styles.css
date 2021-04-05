@@ -14,7 +14,7 @@ header h2 {
     color: #cec8ff;
 }
 
-footer {
+.site-footer {
     background-image: linear-gradient(#cec8ff, white);
     padding: 20px 0;
 }
@@ -34,4 +34,10 @@ footer {
 
 .navbar {
     background-color: #901cad;
+}
+
+.tab-content {
+    border: 1px solid #DDD;
+    border-top: none;
+    padding: 10px;
 }
