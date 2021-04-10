@@ -3,7 +3,7 @@ body {
 }
 
 h1,h2,h3 {
-    font-family: "lobster", cursive;
+    font-family: "Open Sans";
 }
 
 h2 {
@@ -46,5 +46,11 @@ a, a:hover {
 }
 
 .carousel {
-    border-bottom: solid #5637DD;
+    /*border: solid #5637DD; */
+    width: 100%;
+
 }
+
+  .carousel-inner {
+     max-width: 100%;
+  }

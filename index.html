@@ -32,14 +32,85 @@
 
                 <div class="media">
                     <div class="col col-md-4 mt-4 ">
-                        <a class="btn btn-lg btn-info text-nowrap" data-toggle="tooltip" data-placement="bottom"
-                            data-html="true" title="Or call us at <br /><strong>1-206-555-1234</strong>"
-                            href="#reserveForm" role="button">Reserve Campsite</a>
+                        <a type="button" class="btn btn-lg btn-info text-nowrap" data-toggle="modal"
+                            data-target="#reserveModal">
+                            Reserve
+                            Campsite</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h3 class="modal-title">Reserve a Campsite</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+
+                            <div class="row form-group">
+                                <label for="numCampers" class="col-xs-12 col-sm-6 col-form-label">Number Of
+                                    Campers</label>
+
+                                <div class="col">
+
+                                    <select class=form-control" name="numCampers" id="numCampers">
+                                        <option Select>Select</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="row form-group">
+
+                                <label for="date" class="col-xs-12 col-sm-6 col-form-label">Date</label>
+
+                                <div class="col">
+                                    <input type="date" class="col-xs-12 form-control" placeholder="date" id="date"
+                                        name="date">
+                                </div>
+                            </div>
+
+                            <div class="form-group row" data-toggle="buttons">
+
+                                <label for="type" class="col-sm-6 col-form-label text-nowrap">Campsite Type
+
+                                </label>
+                                <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                        <input type="radio" name="siteType" id="siteTent" autocomplete="off" checked />
+                                        Tent
+                                    </label>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="siteType" id="siteRV" autocomplete="off" /> RV
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="row">
+                            <div class="col">
+                                <div type="submit" class="btn btn-secondary" data-dismiss="modal">Cancel</div>
+                                <div type="submit" class="btn btn-primary">Search</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
@@ -74,7 +145,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title">Login</h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
@@ -206,96 +277,51 @@
                 </div>
             </div>
         </div>
-        <div class="row row-content">
-            <div class="col-sm-6 mx-auto">
-                <div class="card">
-                    <div class="card-header text-light bg-info">
-                        <h3>Reserve a Campsite</h3>
+
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 col-sm-2 offset-1">
+                        <h5>Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="aboutus.html">About</a></li>
+                            <li><a href="#">Sites</a></li>
+                            <li><a href="contactus.html">Contact</a></li>
+                        </ul>
                     </div>
-                    <div class="card-body">
-                        <form id="reserveForm">
-                            <div class="row form-group">
-                                <label for="numCampers" class="col-xs-12 col-sm-6 col-form-label">Number Of
-                                    Campers</label>
-
-                                <div class="col">
-
-                                    <select class=form-control" name="numCampers" id="numCampers">
-                                        <option Select>Select</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                    </select>
-                                </div>
-
-                            </div>
-                            <div class="row form-group">
-
-                                <label for="date" class="col-xs-12 col-sm-6 col-form-label">Date</label>
-
-                                <div class="col">
-                                    <input type="date" class="col-xs-12 form-control" placeholder="date" id="date"
-                                        name="date">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div type="submit" class="btn btn-primary">Search</div>
-                                </div>
-                            </div>
-                        </form>
+                    <div class="col-6 col-sm-5 text-center">
+                        <h5>Social</h5>
+                        <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i
+                                class="fa fa-instagram"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i
+                                class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
+                                class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i
+                                class="fa fa-youtube"></i></a>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone"></i>
+                            1-206-555-1234</a><br />
+                        <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i
+                                class="fa fa-envelope-o"></i> campsites@nucamp.co</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </footer>
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-4 col-sm-2 offset-1">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="aboutus.html">About</a></li>
-                        <li><a href="#">Sites</a></li>
-                        <li><a href="contactus.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-sm-5 text-center">
-                    <h5>Social</h5>
-                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i
-                            class="fa fa-instagram"></i></a>
-                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i
-                            class="fa fa-facebook"></i></a>
-                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
-                            class="fa fa-twitter"></i></a>
-                    <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i
-                            class="fa fa-youtube"></i></a>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone"></i>
-                        1-206-555-1234</a><br />
-                    <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i
-                            class="fa fa-envelope-o"></i> campsites@nucamp.co</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+        <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
+        <script>
+            $('#loginModal').on('shown.bs.modal', function () {
+                $('#myInput').trigger('focus')
+            })
+        </script>
 </body>
 
 
